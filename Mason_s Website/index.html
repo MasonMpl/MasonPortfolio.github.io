@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason's Photography Portfolio - MPL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Mason's Photography Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About Mason</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <br/>
+            <br/>
+            <h2>Welcome to my Page!</h2>
+            <p>Explore the portfolio and gain inspiration</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="pic1.jpg" class="lightbox-link">
+                        <img src="pic1.jpg" alt="Photo 1">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic2.jpg" class="lightbox-link">
+                        <img src="pic2.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic3.jpg" class="lightbox-link">
+                        <img src="pic3.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic4.jpg" class="lightbox-link">
+                        <img src="pic4.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic5.jpeg" class="lightbox-link">
+                        <img src="pic5.jpeg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic6.jpeg" class="lightbox-link">
+                        <img src="pic6.jpeg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic7.jpeg" class="lightbox-link">
+                        <img src="pic7.jpeg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic8.jpg" class="lightbox-link">
+                        <img src="pic8.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic9.jpg" class="lightbox-link">
+                        <img src="pic9.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic10.JPG" class="lightbox-link">
+                        <img src="pic10.JPG" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic11.jpg" class="lightbox-link">
+                        <img src="pic11.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic12.JPG" class="lightbox-link">
+                        <img src="pic12.JPG" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic13.jpg" class="lightbox-link">
+                        <img src="pic13.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic14.jpg" class="lightbox-link">
+                        <img src="pic14.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic15.jpg" class="lightbox-link">
+                        <img src="pic15.jpg" alt="Photo 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pic16.jpg" class="lightbox-link">
+                        <img src="pic16.jpg" alt="Photo 2">
+                    </a>
+                </div>
+            </div>
+            <div class="videos-button">
+                <a href="videos.html" class="btn">Check out videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Mason</h2>
+            <p>I am a professional photographer</p>
+            <p>Currently in highschool grade 12</p>
+            <p>Video maker / editor / content creator</p>
+            <p>Enjoys spending time with friends & family.</p>
+            <p>From Hamilton, ON. Canada</p>
+            <p>L8W 1P8</p>
+            <p>💻❤️📷</p>
+        </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Instagram: <a href=https://www.instagram.com/pricelewisphotos target="blank">pricelewisphotos</a></p>
+            <p>Email: masonpricelewis17@gmail.com</p>
+            <p>DM's are open for requests & hire</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MPL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
+    let scrollDirection;
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            scrollDirection = 'down';
+        } else {
+            scrollDirection = 'up';
+        }
+        lastScrollTop = scrollTop;
+
+        if (scrollTop === 0) {
+            header.classList.add('header-at-top');
+            header.classList.remove('hidden');
+        } else if (scrollDirection === 'down') {
+            header.classList.add('hidden');
+            header.classList.remove('visible');
+        } else if (scrollDirection === 'up') {
+            header.classList.add('visible');
+            header.classList.remove('hidden');
+        }
+    });
+});
+     document.addEventListener('DOMContentLoaded', function() {
+    const lightboxLinks = document.querySelectorAll('.lightbox-link');
+    const lightboxContainer = document.createElement('div');
+    lightboxContainer.className = 'lightbox-container';
+    document.body.appendChild(lightboxContainer);
+
+    const lightboxContent = document.createElement('div');
+    lightboxContent.className = 'lightbox-content';
+    lightboxContainer.appendChild(lightboxContent);
+
+    const img = document.createElement('img');
+    lightboxContent.appendChild(img);
+
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'close-btn';
+    closeBtn.innerHTML = '&times;';
+    lightboxContent.appendChild(closeBtn);
+
+    const prevBtn = document.createElement('span');
+    prevBtn.className = 'prev-btn';
+    prevBtn.innerHTML = '&#10094;';
+    lightboxContent.appendChild(prevBtn);
+
+    const nextBtn = document.createElement('span');
+    nextBtn.className = 'next-btn';
+    nextBtn.innerHTML = '&#10095;';
+    lightboxContent.appendChild(nextBtn);
+
+    let currentIndex = 0;
+    const totalImages = lightboxLinks.length;
+
+    // Function to show image at specific index
+    function showImage(index) {
+        currentIndex = index;
+        const imgUrl = lightboxLinks[currentIndex].getAttribute('href');
+        const imgAlt = lightboxLinks[currentIndex].querySelector('img').getAttribute('alt');
+        img.src = imgUrl;
+        img.alt = imgAlt;
+    }
+
+    // Event listener for close button
+    closeBtn.addEventListener('click', function() {
+        lightboxContainer.classList.remove('open');
+    });
+
+    // Event listener for previous button
+    prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    });
+
+    // Event listener for next button
+    nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    });
+
+    // Event listeners for each gallery item
+    lightboxLinks.forEach((link, index) => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            lightboxContainer.classList.add('open');
+            showImage(index);
+        });
+    });
+
+    // Close lightbox when clicking outside the image
+    lightboxContainer.addEventListener('click', function(event) {
+        if (event.target === lightboxContainer) {
+            lightboxContainer.classList.remove('open');
+        }
+    });
+
+    // Close lightbox on Esc key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            lightboxContainer.classList.remove('open');
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>
